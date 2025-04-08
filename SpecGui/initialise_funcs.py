@@ -45,7 +45,7 @@ def _read_setup_file():
     func_name =  __prog__ +  ' _read_setup_file'
 
     # look for setup file here...
-    setup_file = join(getcwd(), PROGRAM_ID + '_setup.txt')
+    setup_file = join(getcwd(), PROGRAM_ID + '_setup.json')
 
     if exists(setup_file):
         try:
@@ -106,7 +106,7 @@ def _read_setup_file():
         sleep(sleepTime)
         exit(0)
 
-    settings['config_file'] = join(config_dir, PROGRAM_ID + '_config.txt')  # configuration file
+    settings['config_file'] = join(config_dir, PROGRAM_ID + '_config.json')  # configuration file
 
     # required for GUI:
     # =================

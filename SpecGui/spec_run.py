@@ -144,7 +144,7 @@ class RunSites(object):
             # Provide the user input to ECOSSE
             # ================================
             if new_inst.stdin is not None:
-                new_inst.stdin.write(bytes(self.cmd,"ascii"))
+                new_inst.stdin.write(bytes(self.cmd, "ascii"))
                 new_inst.stdin.close()
             else:
                 self.lgr.error('Instance is None')
@@ -264,7 +264,7 @@ class RunSites(object):
 
         self.config_check_interval = cfg[grp]['config_check_interval']
         if cfg[grp]['cropName'] == 'limited_data':
-            self.cmd = '{}\n\n{}\n2\n\n'.format(3, 'input.txt')
+            self.cmd = '{}\n\n{}\n\n'.format(3, 'input.txt')
         else:
             self.cmd = '1\n\n\n'
 
